@@ -77,3 +77,37 @@ function countUsingForLoop() {
 		}
 	}
 }
+
+// [] How to access Elements of a string using repetition control structures.
+
+function accessElementsInString() {
+	let name = document.getElementById('userName').value;
+	
+	if (name !== '') {
+		//response if truthy
+		//Checker: alert('Value is Valid');
+		textLength.innerHTML = 'The string is ' + name.length + ' characters long';
+		//upon accessing elements inside a string, this can be done so using [] square brackets.
+		//keep in mind we can access each element through the use of its index number/count.
+		//the count will start from 0 (first character inside the string coreespons to the number 0), the next is 1 and up to the "nth" number
+		/*
+		console.log(name[0]);
+		console.log(name[1]);
+		console.log(name[2]);
+		console.log(name[3]);
+		console.log(name[4]);
+		console.log(name[5]);
+		console.log(name[6]);
+		*/
+	//will use concept of loops in order to produce a much more flexible response for the user's input
+		//initialization ; condition ; iteration
+	for (let startIndex = 0; startIndex < name.length; startIndex++) {
+		//access each element and display it inside the console
+		console.log(name[startIndex]);
+	}
+
+	} else {
+		//response if falsy
+		alert('Value is Invalid');
+	}
+}
