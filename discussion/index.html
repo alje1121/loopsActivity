@@ -14,9 +14,13 @@
 		<div class="row">
 			<div class="col-4">
 				<div class="form-group">
-					<label for="">Task 1</label>
+					<label for="task1">While Loop</label>
+					<!-- get user info -->
 					<input type="number" name="" id="task1" class="form-control">
-					<button type="submit" class="btn btn-primary btn-block mt-5">Enter 1</button>
+					<!-- start the process -->
+					<button type="submit" class="btn btn-primary btn-block mt-5" onclick="countUsingWhile()">Enter 1</button>
+					<!-- display the message to user if value is NOT valid -->
+					<p class="text-danger" id="message"></p>
 				</div>
 			</div>
 			<div class="col-4">
