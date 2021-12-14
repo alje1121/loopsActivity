@@ -26,3 +26,34 @@ function countUsingWhile() {
 		}
 	}
 }
+
+/*
+function that will count to a series of number depending on the value inserted by the user.
+*/
+function countUsingDoWhile() {
+	//get the input of the user
+	let number = document.getElementById('task2').value;
+	// make sure the value is valid (will not accept 0 or less)
+	if (number <= 0) {
+		let displayText = document.getElementById('info')
+		displayText.innerHTML = 'The number is not valid'
+	} else {
+		//PROCEED coz the value is VALID
+		/*
+		let number = Number(prompt('Give me a number'));
+		do{
+			console.log('Do While ' + number);
+			number += 1;	
+		}while (number <10)
+		*/
+		let indexStart = 1 //will count from 1 to n (depending on the value inserted by user)
+		do {
+			//block of code identified here will be executed first
+			let displayText = document.getElementById('info');
+			displayText.innerHTML = number + ' is Valid';
+			alert('Count value: ' + indexStart);
+			indexStart++
+		} while (indexStart <= number);
+
+	}
+}
